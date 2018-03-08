@@ -24,9 +24,9 @@ module.exports = async ({title, description, tags, createdDate, dueDate, priorit
     resolve();
   }));
   await page.type('input[formcontrolname=priority]', priority, {delay: 10});
-  await page.waitFor(2500);
+  await page.waitFor(1500);
   await page.click('.btn.btn-primary.float-right');
   await page.waitForSelector('.btn.btn-primary.float-right', { hidden: true });
-  await page.waitFor(2500);
+  await page.waitFor(1500);
   await browser.close();
 };

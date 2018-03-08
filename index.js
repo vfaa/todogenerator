@@ -1165,25 +1165,28 @@ feb2018 = _.sortBy(feb2018, 'sortableCreatedDate');
 async function addTodosPerMonth(monthArr) {
   for (let i = 0; i < monthArr.length; i++) {
     await addTodo(monthArr[i]);
+    const percent = Math.floor((i+1)/monthArr.length*100);
+    console.log(`${percent}%`);
   }
 }
 
 mar2016 = mar2016.slice(5);
+jan2017 = jan2017.slice(19);
 
 // addTodosPerMonth(mar2016);
 // addTodosPerMonth(apr2016);
 // addTodosPerMonth(may2016);
 // addTodosPerMonth(jun2016);
 // addTodosPerMonth(jul2016);
-
-// above is done
-
-addTodosPerMonth(aug2016);
+// addTodosPerMonth(aug2016);
 // addTodosPerMonth(sep2016);
 // addTodosPerMonth(oct2016);
 // addTodosPerMonth(nov2016);
 // addTodosPerMonth(dec2016);
 // addTodosPerMonth(jan2017);
+
+// above is done
+
 // addTodosPerMonth(feb2017);
 
 // addTodosPerMonth(mar2);
